@@ -38,23 +38,6 @@ h1 {
     flex-basis: 45%;
 }
 
-.unicorn-container {
-    position: relative;
-    height: 200px;
-    width: 100%;
-}
-
-.unicorn {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    background-image: url('https://i.imgur.com/L3e16iF.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 
 .shared-image-container {
     text-align: center;
