@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #aaa;
+}
+
+#countdown {
+    font-size: 2em;
+    color: #4a4a4a;
+}
+
+.unicorn-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.unicorn {
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+    width: 150px;
+    height: 150px;
+    background-image: url('https://i.imgur.com/r63tGML.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: unicorn-gallop 10s linear infinite;
+}
+
+@keyframes unicorn-gallop {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: sparkle 5s linear infinite;
+    z-index: -1;
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
