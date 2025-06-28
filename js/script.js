@@ -28,19 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextAuriBirthday = getNextBirthday(today, auriBirthday);
         const auriDiff = nextAuriBirthday - today;
         const auriDays = Math.floor(auriDiff / (1000 * 60 * 60 * 24));
-        auriCountdownElement.innerHTML = `<p>Only ${auriDays} days until your birthday!</p>`;
+        auriCountdownElement.innerHTML = `<h3>Auri</h3><p>${auriDays} days to go!</p>`;
 
         // Willow's Countdown
         const nextWillowBirthday = getNextBirthday(today, willowBirthday);
         const willowDiff = nextWillowBirthday - today;
         const willowDays = Math.floor(willowDiff / (1000 * 60 * 60 * 24));
-        willowCountdownElement.innerHTML = `<p>Willow's birthday is in ${willowDays} days!</p>`;
+        willowCountdownElement.innerHTML = `<h3>Willow</h3><p>${willowDays} days to go!</p>`;
 
         // Cats' Countdown
         const nextCatsBirthday = getNextBirthday(today, catsBirthday);
         const catsDiff = nextCatsBirthday - today;
         const catsDays = Math.floor(catsDiff / (1000 * 60 * 60 * 24));
-        catsCountdownElement.innerHTML = `<p>Coco and TeeTee's birthday is in ${catsDays} days!</p>`;
+        catsCountdownElement.innerHTML = `<p>Coco & TeeTee's birthday is in ${catsDays} days!</p>`;
     }
 
     updateCountdown();
