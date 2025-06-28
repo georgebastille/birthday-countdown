@@ -1,6 +1,10 @@
-const countdownElement = document.getElementById('countdown');
+const auriCountdownElement = document.getElementById('auri-countdown');
+const willowCountdownElement = document.getElementById('willow-countdown');
+const catsCountdownElement = document.getElementById('cats-countdown');
 
-const birthday = new Date('2016-09-05T00:00:00');
+const auriBirthday = new Date('2016-09-05T00:00:00');
+const willowBirthday = new Date(new Date().getFullYear(), 10, 26); // Month is 0-indexed
+const catsBirthday = new Date(new Date().getFullYear(), 9, 6); // Month is 0-indexed
 
 function getNextBirthday(today, birthDate) {
     const birthMonth = birthDate.getMonth();
@@ -18,14 +22,24 @@ function getNextBirthday(today, birthDate) {
 
 function updateCountdown() {
     const today = new Date();
-    const nextBirthday = getNextBirthday(today, birthday);
-    const diff = nextBirthday - today;
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    // Auri's Countdown
+    const nextAuriBirthday = getNextBirthday(today, auriBirthday);
+    const auriDiff = nextAuriBirthday - today;
+    const auriDays = Math.floor(auriDiff / (1000 * 60 * 60 * 24));
+    auriCountdownElement.innerHTML = `<p>Only ${auriDays} days until your birthday!</p>`;
 
-    countdownElement.innerHTML = `
-        <p>${days} days until your birthday!</p>
-    `;
+    // Willow's Countdown
+    const nextWillowBirthday = getNextBirthday(today, willowBirthday);
+    const willowDiff = nextWillowBirthday - today;
+    const willowDays = Math.floor(willowDiff / (1000 * 60 * 60 * 24));
+    willowCountdownElement.innerHTML = `<p>Willow's birthday is in ${willowDays} days!</p>`;
+
+    // Cats' Countdown
+    const nextCatsBirthday = getNextBirthday(today, catsBirthday);
+    const catsDiff = nextCatsBirthday - today;
+    const catsDays = Math.floor(catsDiff / (1000 * 60 * 60 * 24));
+    catsCountdownElement.innerHTML = `<p>Coco and TeeTee's birthday is in ${catsDays} days!</p>`;
 }
 
 updateCountdown();
