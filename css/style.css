@@ -1,64 +1,90 @@
 body {
-    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
 }
 
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
 h1 {
-    color: #ff69b4;
-    font-size: 3em;
-    text-shadow: 2px 2px 4px #aaa;
+    font-family: 'Pacifico', cursive;
+    color: #ff6b6b;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-#countdown {
-    font-size: 2em;
-    color: #4a4a4a;
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #48dbfb;
+    font-size: 2.5em;
+    margin-top: 30px;
+}
+
+.shared-image-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff6b6b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .birthday-duo {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .countdown-item {
     flex-basis: 45%;
-}
-
-
-.shared-image-container {
-    text-align: center;
     margin-bottom: 20px;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ff69b4;
+.countdown-item h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 5px;
 }
 
-@keyframes unicorn-gallop {
-    0% {
-        left: -150px;
-    }
-    100% {
-        left: 100%;
-    }
+.countdown-item p, #cats-countdown p {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #ff6b6b;
+    margin: 0;
+}
+
+#cats-countdown p {
+    font-size: 1.5em;
+    color: #48dbfb;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 40px 0;
 }
 
 body::before {
@@ -71,16 +97,14 @@ body::before {
     background: url('https://www.transparenttextures.com/patterns/stardust.png');
     animation: sparkle 5s linear infinite;
     z-index: -1;
+    opacity: 0.5;
 }
 
 @keyframes sparkle {
     0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
+        background-position: 0 0;
     }
     100% {
-        opacity: 0;
+        background-position: -1000px 500px;
     }
 }
